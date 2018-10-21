@@ -17,6 +17,7 @@
     "react/jsx-filename-extension": 0,
     "comma-dangle": 0,
     "no-use-before-define": 0,
-    "operator-linebreak": 0
+    "operator-linebreak": 0,
+    "react/destructuring-assignment": 0
   }
 }
