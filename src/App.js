@@ -6,12 +6,18 @@ import './App.css';
 import Todolist from './Todolist';
 
 type PropsType = {};
+type StateType = Array<{knopka: boolean, task: string}>;
 
-class App extends Component<PropsType> {
+class App extends Component<PropsType, StateType> {
+  constructor(props: PropsType) {
+    super(props);
+    this.state = [{ knopka: true, task: "clean3" }];
+  }
+
   render() {
     return (
       <div className="App">
-        <Todolist list={[{ knopka: true, task: "clean2" }, { knopka: false, task: "clean3" }]} />
+        <Todolist list={this.state} />
       </div>
     );
   }
