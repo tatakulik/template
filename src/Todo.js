@@ -9,8 +9,13 @@ class Todo extends Component<PropsType> {
   render() {
     return (
       <div className="Todo">
-        {this.props.knopka}
-        {this.props.task}
+        <input
+          type="checkbox"
+          checked={this.props.knopka}
+        />
+        <div className="TodoCheckbox">
+          {this.props.task}
+        </div>
       </div>
     );
   }
