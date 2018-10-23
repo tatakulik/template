@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import './Todo.css';
 
+
 type PropsType = {knopka: boolean, task: string};
 
 class Todo extends Component<PropsType> {

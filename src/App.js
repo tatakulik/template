@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import Todo from './Todo';
+// import Button from './Button';
+import Todolist from './Todolist';
 
 type PropsType = {};
 
@@ -10,7 +11,7 @@ class App extends Component<PropsType> {
   render() {
     return (
       <div className="App">
-        <Todo knopka task="clean" />
+        <Todolist list={[{ knopka: true, task: "clean2" }, { knopka: false, task: "clean3" }]} />
       </div>
     );
   }
