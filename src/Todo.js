@@ -13,6 +13,7 @@ class Todo extends Component<PropsType> {
         <input
           type="checkbox"
           checked={this.props.knopka}
+          readOnly
         />
         <div className="TodoCheckbox">
           {this.props.task}
