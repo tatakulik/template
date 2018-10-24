@@ -30,3 +30,26 @@
     transform: rotate(360deg);
   }
 }
+
+.Button {
+  background-color: #a7e183;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(15, 15, 15);
+  ButtonFace: #a7e183;
+}
+
+.Button2 {
+  background-color: #4CAF50; /* Green */
+  border: 5px solid rgb(240, 245, 243);
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

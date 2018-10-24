@@ -23,7 +23,7 @@ class Todolist extends Component<PropsType> {
   render() {
     return (
       <div className="Todolist">
-        {this.props.list.map(
+        {(this.props.list).map(
           (todo2, i) => <Todo key={i} knopka={todo2.knopka} task={todo2.task} />
         )}
       </div>

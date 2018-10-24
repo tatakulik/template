@@ -4,29 +4,47 @@ import React, { Component } from 'react';
 import './App.css';
 // import Button from './Button';
 import Todolist from './Todolist';
+import Addtodo from './Addtodo';
 
 type PropsType = {};
 type StateType = {todos: Array<{knopka: boolean, task: string}>};
 
+// const App = {
+// props: {
+
+// }
+
+
+// state: {
+
+// }
+
+//   addTodo: function() {
+
+//   }
+
+//   render: function() {
+
+//   }
+// }
+
 class App extends Component<PropsType, StateType> {
   constructor(props: PropsType) {
     super(props);
-    this.state = { todos: [{ knopka: true, task: "clean3" }] };
+    this.state = { todos: [] };
   }
 
-  addTodo() {
-    const todos = [...this.state.todos];
-    todos.push({ knopka: true, task: "clean4" });
-    this.setState({ todos: todos });
+  addTodo(todoname: string) {
+    const todosValue = [...this.state.todos];
+    todosValue.push({ knopka: true, task: todoname });
+    this.setState({ todos: todosValue });
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="Button">
         <Todolist list={this.state.todos} />
-        <button type="button" onClick={() => this.addTodo()}>
-          add
-        </button>
+        <Addtodo onAdd={todoname => this.addTodo(todoname)} />
       </div>
     );
   }
