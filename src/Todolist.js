@@ -16,7 +16,7 @@ import Todo from './Todo';
 //   }
 // }
 
-type PropsType = {list: Array<{knopka: boolean, task: string}>};
+type PropsType = {list: Array<{knopka: boolean, task: string}>, onClick: (string) => void};
 
 
 class Todolist extends Component<PropsType> {
@@ -24,7 +24,13 @@ class Todolist extends Component<PropsType> {
     return (
       <div className="Todolist">
         {(this.props.list).map(
-          (todo2, i) => <Todo key={i} knopka={todo2.knopka} task={todo2.task} />
+          (todo2, i) => (<Todo
+            key={i}
+            knopka={todo2.knopka}
+            task={todo2.task}
+            onClick={name => this.props.onClick(name)}
+          />
+          )
         )}
       </div>
     );

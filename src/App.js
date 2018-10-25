@@ -34,6 +34,11 @@ class App extends Component<PropsType, StateType> {
     this.state = { todos: [] };
   }
 
+  removeTodo(taskName: string) {
+    const todosValue = this.state.todos.filter(todo => (taskName !== todo.task));
+    this.setState({ todos: todosValue });
+  }
+
   addTodo(todoname: string) {
     const todosValue = [...this.state.todos];
     todosValue.push({ knopka: true, task: todoname });
@@ -43,7 +48,7 @@ class App extends Component<PropsType, StateType> {
   render() {
     return (
       <div className="Button">
-        <Todolist list={this.state.todos} />
+        <Todolist list={this.state.todos} onClick={name => this.removeTodo(name)} />
         <Addtodo onAdd={todoname => this.addTodo(todoname)} />
       </div>
     );
