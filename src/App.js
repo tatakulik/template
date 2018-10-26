@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todolist from './Todolist';
+import Addtodo from './Addtodo';
 
 type PropsType = {};
 
