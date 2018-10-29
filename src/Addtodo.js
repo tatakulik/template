@@ -5,28 +5,33 @@ import './Addtodo.css';
 import Todo from './Todo';
 import Todolist from './Todolist';
 
-
 type PropsType = { 
-    isButton: boolean,
-    list: Array<{ checked: boolean, task: string }>, 
-    onСlick: {task: string} => void }; 
+  isButton: boolean,
+  list: Array<{ checked: boolean, task: string }>, 
+  onСlick: {task: string} => void }; 
 type StateType = {isButton: boolean};
 
-class Todolist extends Component<PropsType> {
-  constructor(props) {
-    super(props);
-    this.state = { isButton: true }; 
-  }
+function isButton(props) {
+  return (
+    <button styleName="button" onClick={props.onClick}/>
+      add
+    </button>
+  );
+}
 
+//   constructor(props) {
+//     super(props);
+//     this.state = { isButton: true }; 
+//   }
+
+class Addtodo extends Component<PropsType> {
   render() {
     return (
       <div className="Addtodo">
-        <button styleName="button" onClick={this.handleOnClick}>
-       add 
-      </button>  
+        {isButton} 
       </div>
     );
-  }
+  }  
 }
 
 export default Addtodo;
