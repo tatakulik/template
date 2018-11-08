@@ -4,7 +4,11 @@ import React, { Component } from 'react';
 import './Todolist.css';
 import Todo from './Todo';
 
-type PropsType = { list: Array<{ checked: boolean, task: string }>, onСlick: {task: string} => void };
+type PropsType = {
+  list: Array<{ checked: boolean, task: string }>,
+// onСlick: {task: string} => void
+};
+
 
 class Todolist extends Component<PropsType> {
   render() {
