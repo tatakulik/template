@@ -6,13 +6,31 @@ import './Addtodo.css';
 // import Todolist from './Todolist';
 
 type PropsType = {onClick: (task: string) => void};
+type StateType = {box: string};
 
-class Addtodo extends Component<PropsType> {
+class Addtodo extends Component<PropsType, StateType> {
+  constructor(props: PropsType) {
+    super(props);
+    this.state = { box: "" };
+  }
+
+  boxInput(box: string) {
+    this.setState({ box: box });
+  }
+
+  clearBox() {
+    this.props.onClick(this.state.box);
+    this.setState({ box: "" });
+  }
+
   render() {
     return (
-      <button type="button" className="button" onClick={() => this.props.onClick("clean2")}>
-        add
-      </button>
+      <div>
+        <input type="text" className="text" value={this.state.box} onChange={event => this.boxInput(event.target.value)} />
+        <button type="button" className="button" onClick={() => this.clearBox()}>
+           add
+        </button>
+      </div>
     );
   }
 }
