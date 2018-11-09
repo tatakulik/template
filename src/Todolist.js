@@ -6,7 +6,7 @@ import Todo from './Todo';
 
 type PropsType = {
   list: Array<{ checked: boolean, task: string }>,
-// onСlick: {task: string} => void
+  onClick: (task: string) => void
 };
 
 
@@ -14,7 +14,7 @@ class Todolist extends Component<PropsType> {
   render() {
     return (
       <div className="Todolist">
-        {this.props.list.map((todo, i) => <Todo key={i} task={todo.task} />)}
+        {this.props.list.map((todo, i) => <Todo key={i} task={todo.task} onClick={todo1 => this.props.onClick(todo1)} />)}
       </div>
     );
   }
