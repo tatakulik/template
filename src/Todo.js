@@ -5,7 +5,7 @@ import './Todo.css';
 
 type PropsType = {
     task: string,
-    onClick: (task: string) => void,
+    onClick: (task: string) => void, // передает todo, который нужно удалить, в качестве аргумента
 };
 
 class Todo extends Component<PropsType> { // у всех input есть св-во onchange Button - `onclick
