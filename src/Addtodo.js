@@ -2,8 +2,6 @@
 
 import React, { Component } from 'react';
 import './Addtodo.css';
-// import Todo from './Todo';
-// import Todolist from './Todolist';
 
 type PropsType = {onClick: (box: string) => void}; // можно просто написать string,
 // на момент нажатия кнопки add onClick говорит нам что введено в поле ввода/ у нас это строка

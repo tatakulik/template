@@ -21,4 +21,4 @@ class Todolist extends Component<PropsType> {
 }
 
 export default Todolist;
-// в функции map - создаем компонет todo и описываем  task и onClick так как они прописаны в Props todo 
+// в функции map - создаем компонет todo и описываем  task и onClick так как они прописаны в Props todo
